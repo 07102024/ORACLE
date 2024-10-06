@@ -1,0 +1,23 @@
+set serveroutput on;
+declare
+a number;
+b number;
+c number;
+procedure findmin(x IN number,y IN number,z OUT number)
+IS
+begin
+if x<y then
+z:=x;
+else
+z:=y;
+end if;
+end;
+begin
+a:=23;
+b:=45;
+findmin(a,b,c);
+DBMS_OUTPUT.PUT_LINE('minimum of (23,45):'||c);
+end;
+/
+SQL>minimum of (23,45):23
+SQL>exit
